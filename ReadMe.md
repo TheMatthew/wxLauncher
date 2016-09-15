@@ -155,7 +155,7 @@ Command line
 -----------
 - Download the wxLauncher source
 - sudo apt-get install build-essential libopenal-dev libwxgtk2.8-dev
-libwxgtk2.8-dbg python-markdown
+libwxgtk2.8-dbg python3-markdown
 - Download and install the cmake 2.8 .debs for your platform from:
 <https://launchpad.net/ubuntu/+source/cmake>.  You will need cmake-data, and
 cmake-2.8.0* for your platform, plus cmake-curses-gui or cmake-qt-gui
@@ -164,10 +164,10 @@ cmake-2.8.0* for your platform, plus cmake-curses-gui or cmake-qt-gui
 - cd build
 To prevent error messages like "The launcher is expecting (/home/foo/bar) to
 contain the resource images." from occurring, either type:
-- cmake -DUSE_OPENAL=1 -DDEVELOPMENT_MODE=1 -DCMAKE_INSTALL_PREFIX=/usr/local ../
+- cmake -DUSE_OPENAL=1 -DDEVELOPMENT_MODE=1 -DPYTHON_EXECUTABLE=/usr/bin/python3 -DCMAKE_INSTALL_PREFIX=/usr/local ../
 - make
 Or instead type:
-- cmake -DUSE_OPENAL=1 -DCMAKE_INSTALL_PREFIX=/usr/local ../
+- cmake -DUSE_OPENAL=1 -DPYTHON_EXECUTABLE=/usr/bin/python3 -DCMAKE_INSTALL_PREFIX=/usr/local ../
 - make
 - make install (with root privileges)
 
